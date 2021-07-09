@@ -2,7 +2,7 @@ const express = require('express')
 
 const server = express()
 
-const PORT = 8080
+const PORT = process.env.PORT || 8080
 
 function getAcces(method, req) {
   const checkUID = '12test34-test-5678-test-90test123456'
