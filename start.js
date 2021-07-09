@@ -113,7 +113,7 @@ server.get('/', (req, res) => {
         <h1>Welcome to PepeTest</h1>
         <div style="${style}">
           <p>Your ID: 12test34-test-5678-test-90test123456</p>
-          <p>Server: http://${req.headers.host}/</p>
+          <p>Server: ${req.protocol}://${req.headers.host}/</p>
           <p>Method: GET</p>
           <p>URL: /api/homework/v1/learn/api/<</>your-id>/token</p>
           <p>Example: name@example.com_year_2020</p>
