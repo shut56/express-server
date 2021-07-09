@@ -1,8 +1,12 @@
 const express = require('express')
+const cors = require('cors')
 
 const server = express()
 
 const PORT = process.env.PORT || 8080
+
+server.use(cors())
+server.use(express.json())
 
 function getAcces(method, req) {
   const checkUID = '12test34-test-5678-test-90test123456'
@@ -95,10 +99,7 @@ function getAcces(method, req) {
   }
 }
 
-server.use(express.json())
-
 const style = 'border: 1px solid #ddd; border-left: 0.2em solid #f36d33; background: #f4f4f4; margin-left: 1em; padding: 1em;'
-const uid = `<your_ID>`
 
 server.get('/', (req, res) => {
   res.send(`
